@@ -10,30 +10,9 @@
     <link href="https://fonts.googleapis.com/css?family=Black+Ops+One" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    //Needed for Firebase App
-    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
-    //Additional Services
-    <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase-firestore.js"></script>
 
-    <script> // Initialize Firebase
-      var config = {
-        apiKey: "AIzaSyCzdmFfujk0A1UegxmmE5vVPR3il7UEEeg",
-        authDomain: "ride-sharing-web-app.firebaseapp.com",
-        databaseURL: "https://ride-sharing-web-app.firebaseio.com",
-        projectId: "ride-sharing-web-app",
-        storageBucket: "ride-sharing-web-app.appspot.com",
-        messagingSenderId: "296407407348"
-      };
-      firebase.initializeApp(config);
-        
-        
-      /* trying youtube video stuff
-      const db = firebase.firestore();
-      db.settings({ timestampsInSnapshots: true })
-      */
-    </script>
-<script src="app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-firestore.js"></script>
 </head>
 
 <body>
@@ -46,6 +25,8 @@
             <li><a class="active" href="index.html">Home</a></li>
             <li><a href="requests.html">Requests</a></li>
             <li><a href="managePosts.html">Manage Posts</a></li>
+            <li><a href="devPage.html">Dev. Page</a></li>
+            <li><a href="test.html">Test Page</a></li>
         </ul>
     </div>
 
@@ -55,6 +36,53 @@
             <button type="submit"><img src="magnifyingGlass.gif"></button>
         </form>
     </div>
+
+    <!--<div class="postedAlert">You are now registered!</div>-->
+
+    <div id="firstForm">
+
+        <form>
+            <label for="destination">Destination</label><br>
+            <input type="text" id="destination" name="destination" placeholder="City"><br>
+
+            <label for="location">Location</label><br>
+            <input type="text" id="location" name="location" placeholder="Signing Hills"><br>
+
+            <label for="date">Date going</label><br>
+            <input type="text" id="dateGoing" name="dateGoing" placeholder="2/21/2019">
+            <br>
+
+            <label for="departureTime">Departure time</label><br>
+            <input type="text" id="departureTime" name="departureTime" placeholder="5:00 PM"><br>
+
+            <label for="arrivalTime">Arrival time</label><br>
+            <input type="text" id="arrivalTime" name="arrivalTime" placeholder="6:00 PM"><br>
+
+            <label for="returnTime">Return time</label><br>
+            <input type="text" id="returnTime" name="returnTime" placeholder="7:00 PM"><br>
+
+            <label for="seats">Seats available</label><br>
+            <input type="text" id="seats" name="seats" placeholder="3"><br>
+
+            <label for="tripDescription">Trip Description</label><br>
+            <input type="text" id="tripDescription" name="tripDescription" placeholder="Will be making a quick trip to Walmart and back..."><br>
+
+            <input type="submit" value="Submit">
+        </form>
+
+    </div>
+
+
+    <!-- <script>
+                var input = document.getElementById("myInput");
+                input.addEventListener("keyup", function(event) {
+                    if (event.keyCode === 13) {
+                        event.preventDefault();
+                        document.getElementById("myBtn").click();
+                    }
+                });
+
+        </script>-->
 
     <div class="row">
         <div class="post">
@@ -161,10 +189,10 @@
                     </p>
                 </div>
             </div>
-
         </div>
-
     </div>
+    <script src="index.js"></script>
+    <!-- <script src="CloudFireStoreForm.js"></script -->
 </body>
 
 </html>
